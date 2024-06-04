@@ -40,9 +40,9 @@ def index():
 @app.route('/get',methods=['GET','POST'])
 def chat():
     msg=request.form["msg"]
-    imput=msg
-    print(input)
-    result=qa.invoke({"query": input})
+    user_message=msg
+    print(user_message)
+    result=qa.invoke({"query": user_message})
     print("Response : ",result["result"])
     return str(result["result"])
 
